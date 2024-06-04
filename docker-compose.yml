@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  swe-agent:
+    image: swe-agent:latest
+    container_name: swe-agent
+    build: .
+    volumes:
+      - ./data:/app/data
+    environment:
+      - API_KEY=${API_KEY}
+    ports:
+      - "8000:8000"
