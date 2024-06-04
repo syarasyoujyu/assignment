@@ -3,7 +3,7 @@ version: '3.8'
 services:
   swe-agent:
     image: swe-agent:latest
-    container_name: swe-agent
+    container_name: swe-agent_assignment
     build: .
     volumes:
       - ./data:/app/data
