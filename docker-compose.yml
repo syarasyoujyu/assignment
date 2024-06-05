@@ -4,9 +4,10 @@ services:
     image: sweagent/swe-agent-run:latest
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+      - ./trajectories:/app/trajectories
     environment:
       - GITHUB_TOKEN=${GITHUB_TOKEN}
       - OPENAI_API_KEY=${OPENAI_API_KEY}
     stdin_open: true
     tty: true
-    command: sh -c "docker pull sweagent/swe-agent:latest && python run.py --image_name=sweagent/swe-agent:latest  --model_name=gpt4 --data_path=${DATA_PATH} --config_file=${CONFIG_FILE} --skip_existing=${SKIP_EXISTING}"
+    command: sh -c "python run.py --image_name=sweagent/swe-agent:latest  --model_name=gpt4 --data_path=${DATA_PATH} --config_file=${CONFIG_FILE} --skip_existing=${SKIP_EXISTING} --apply_patch_locally"
