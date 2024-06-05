@@ -1,5 +1,5 @@
 # assignment
-##　使い方:<br>
+## 使い方:<br>
 コマンド上で./run.shとすれば動く<br>
 (事前に、.env（ルートディレクトリ上）にGITHUB_TOKENやOPENAI_API_KEYSなどの環境変数を入れる)<br>
 .envに入れる環境変数<br>
