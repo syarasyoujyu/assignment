@@ -15,7 +15,7 @@ OPENAI_API_KEY=~~~~~~~~<br>
 docker-compose.ymlによってsweagent/swe-agent-run:latestを起動し、このファイル上に書いてあったcommandを実行する。<br>
 commandの参照URLは'https://princeton-nlp.github.io/SWE-agent/installation/docker/'<br>
 docker-compose.ymlのコマンドはSWE-agent上のrun.pyを作動させるもので、その際に必要な変数を記述した。<br>
-また、SWE-agentが生成したファイルは、docker-compose.ymlのvolumesによってマウんティングし、trajectoriesフォルダに残せるようにした。<br>
+また、SWE-agentが生成したファイルは、docker-compose.ymlのvolumesによってマウントし、trajectoriesフォルダに残せるようにした。<br>
 また、.gitignoreで.envを選んだことによって.envにあるAPI_KEYを流出させずに済む<br>
 
 ## 感想：<br>
